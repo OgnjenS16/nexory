@@ -1650,3 +1650,99 @@ section, header, footer {
   from { opacity: 0; transform: translateY(40px) scale(0.95); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
+/* === NEXORY ULTRALITE LOADER === */
+.nx-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+.nx-loader.hide {
+  opacity: 0;
+}
+
+/* Logo container */
+.nx-logo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nx-logo img {
+  width: 70px;
+  height: auto;
+  animation: logoPulse 2.8s ease-in-out infinite;
+}
+
+.nx-logo-ring {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #9a4dff;
+  animation: ringRotate 6s linear infinite, ringGlow 3s ease-in-out infinite;
+}
+
+/* Progress bar */
+.nx-progress {
+  width: 150px;
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.nx-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #9a4dff, #3a8fff);
+  animation: progressFill 2.4s ease-out forwards;
+}
+
+/* Animations */
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ringGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(154,77,255,0.25); opacity: 1; }
+  50% { box-shadow: 0 0 35px rgba(154,77,255,0.5); opacity: 0.8; }
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* Language section (unchanged but fade smoother) */
+.nx-lang-select {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
