@@ -148,28 +148,30 @@
 <!-- LOADER -->
 <div class="nx-loader" id="loader">
   <div class="nx-logo">
-    <div class="nx-logo-ring"></div>
     <img src="assets/img/nexory_logo.png" alt="NEXORY Logo">
   </div>
-  <div class="nx-progress">
-    <div class="nx-progress-bar"></div>
-  </div>
+  <div class="nx-progress"></div>
 </div>
 
 <!-- LANGUAGE SELECTION -->
 <div class="nx-lang-select" id="langSelect">
   <div class="nx-lang-title">Select language / Odaberi jezik</div>
   <div class="nx-lang-buttons">
-    <button class="nx-btn-lang" onclick="location.href='index.html'">SR</button>
-    <button class="nx-btn-lang" onclick="location.href='index-en.html'">EN</button>
+    <button class="nx-btn-lang">SR</button>
+    <button class="nx-btn-lang">EN</button>
   </div>
 </div>
 
 <script>
-  const loader = document.getElementById("loader");
-  const langSelect = document.getElementById("langSelect");
+const loader = document.getElementById("loader");
+const langSelect = document.getElementById("langSelect");
 
-  // Start loader sequence
+// ako je jezik već izabran, preskače loader i izbor jezika
+if (sessionStorage.getItem("langChosen")) {
+  loader.remove();
+  langSelect.remove();
+} else {
+  // standardni loader sekvenca
   window.addEventListener("load", () => {
     setTimeout(() => {
       loader.classList.add("hide");
@@ -179,5 +181,17 @@
       }, 600);
     }, 2400);
   });
-</script>
+}
 
+// pamti izbor jezika
+document.querySelectorAll(".nx-btn-lang").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    const lang = btn.textContent.trim();
+    sessionStorage.setItem("langChosen", lang);
+    window.location.href = lang === "EN" ? "index-en.html" : "index.html";
+  });
+});
+</script>
+</body>
+</html>
