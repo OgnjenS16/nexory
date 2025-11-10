@@ -3,272 +3,130 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NEXORY — Preciznost izvan dizajna</title>
-  <meta name="description" content="Nexory gradi digitalne sisteme: web sajtovi, brending, UI/UX i AI automatizacije. Preciznost izvan dizajna." />
-  <meta name="color-scheme" content="dark light" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>NEXORY SYSTEM — Preciznost izvan dizajna</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Nexory System — web, video, identitet i menadžment u jednom sistemu.">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nx-body">
-  <!-- ===== HEADER ===== -->
-  <header class="nx-header" id="top">
-    <div class="nx-container nx-header__wrap">
-      <a class="nx-logo" href="#top" aria-label="Nexory">
-        <img src="assets/img/nexory_logo.png" alt="Nexory logo" class="nx-logo__img">
-        <span class="nx-logo__text">NEXORY</span>
-      </a>
+<body>
 
-      <nav class="nx-nav" aria-label="Glavna navigacija">
-        <a href="#services" class="nx-nav__link">Usluge</a>
-        <a href="#pricing" class="nx-nav__link">Paketi</a>
-        <a href="#portfolio" class="nx-nav__link">Radovi</a>
-        <a href="#ugc" class="nx-nav__link">UGC</a>
-        <a href="#about" class="nx-nav__link">Ko smo</a>
-        <a href="#contact" class="nx-nav__cta">Kontakt</a>
-      </nav>
+  <header class="nx-header" id="nxHeader">
+    <div class="nx-brand">
+      <img src="assets/img/nexory_logo.png" alt="NEXORY Logo"><b>NEXORY SYSTEM</b>
     </div>
+    <nav class="nx-nav">
+      <a href="#web">Web</a>
+      <a href="#video">Video</a>
+      <a href="#branding">Identitet</a>
+      <a href="#mgmt">Menadžment</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
   <section class="nx-hero" id="hero">
-    <div class="nx-container nx-hero__wrap">
-      <h1 class="nx-hero__title">Sistemi koji tvoj brend dižu iznad dizajna.</h1>
-      <p class="nx-hero__subtitle">
-        Web, brending, UI/UX i AI automatizacije — spajamo estetiku i operativu u jednu mašinu.
-      </p>
-      <div class="nx-hero__cta">
-        <a href="#contact" class="nx-btn nx-btn--primary">Zatraži ponudu</a>
-        <a href="#portfolio" class="nx-btn nx-btn--ghost">Pogledaj radove</a>
-      </div>
-      <ul class="nx-hero__stats" aria-label="Kratke statistike">
-        <li><strong>0% šablona</strong><span>— sve od nule</span></li>
-        <li><strong>100% sistem</strong><span>— vizuelno + tehnički</span></li>
-        <li><strong>1 fokus</strong><span>— rezultat, ne hype</span></li>
-      </ul>
+    <div class="nx-wrap">
+      <h1 class="nx-title">Preciznost izvan dizajna.</h1>
+      <p class="nx-sub">Sistem koji gradi strukturu brenda, od koda do percepcije.</p>
+      <a class="nx-cta" href="#web">Aktiviraj sistem</a>
     </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="nx-section" id="services" aria-labelledby="services-title">
-    <div class="nx-container">
-      <h2 class="nx-h2" id="services-title">Usluge</h2>
-      <div class="nx-grid nx-grid--3">
-        <article class="nx-card">
-          <h3 class="nx-card__title">Web sistemi</h3>
-          <p class="nx-card__text">Modularni, brzi, spremni za rast. SEO, performanse, bezbednost.</p>
-          <ul class="nx-list">
-            <li>Custom frontend (bez šablona)</li>
-            <li>CMS i kolekcije sadržaja</li>
-            <li>Forme, e-mail i integracije</li>
-          </ul>
-        </article>
+  <div class="nx-divider"></div>
 
-        <article class="nx-card">
-          <h3 class="nx-card__title">Brending / UI-UX</h3>
-          <p class="nx-card__text">Jedinstvena identitetska logika, ne Canva okviri.</p>
-          <ul class="nx-list">
-            <li>Logo i vizuelni jezik</li>
-            <li>Komponentni UI sistem</li>
-            <li>Design tokens i dokumentacija</li>
-          </ul>
-        </article>
-
-        <article class="nx-card">
-          <h3 class="nx-card__title">AI & Automatizacije</h3>
-          <p class="nx-card__text">Manje ručnog rada, više pametnih tokova.</p>
-          <ul class="nx-list">
-            <li>Asistenti i workflow botovi</li>
-            <li>Generisanje sadržaja</li>
-            <li>Analitika i rutine</li>
-          </ul>
-        </article>
+  <section id="web">
+    <div class="nx-wrap reveal">
+      <h2 class="nx-section-title">WEB SISTEM</h2>
+      <p class="nx-section-sub">Arhitektura, učitavanje, UX i SEO u jednoj komandnoj liniji.</p>
+      <div class="nx-grid">
+        <article class="nx-card"><h3>Basic</h3><div class="nx-price">od 80€</div><ul class="nx-list"><li>1–3 stranice</li><li>Responzivan dizajn</li><li>Osnovni SEO</li></ul></article>
+        <article class="nx-card"><h3>Standard</h3><div class="nx-price">od 150€</div><ul class="nx-list"><li>4–6 stranica</li><li>UX interakcije</li><li>Napredni SEO</li></ul></article>
+        <article class="nx-card"><h3>Premium</h3><div class="nx-price">od 250€</div><ul class="nx-list"><li>Custom CMS</li><li>Server & domen setup</li><li>Održavanje 1 mesec</li></ul></article>
       </div>
     </div>
   </section>
 
-  <!-- ===== PRICING ===== -->
-  <section class="nx-section" id="pricing" aria-labelledby="pricing-title">
-    <div class="nx-container">
-      <h2 class="nx-h2" id="pricing-title">Paketi</h2>
+  <div class="nx-divider"></div>
 
-      <div class="nx-grid nx-grid--3">
-        <article class="nx-price">
-          <header class="nx-price__head">
-            <h3>Core</h3>
-            <p>Za brendove koji tek startuju.</p>
-          </header>
-          <ul class="nx-price__features">
-            <li>1 landing strana</li>
-            <li>Osnovni brending set</li>
-            <li>Kontakt forma + e-mail</li>
-          </ul>
-          <a href="#contact" class="nx-btn nx-btn--ghost">Zatraži ponudu</a>
-        </article>
-
-        <article class="nx-price nx-price--focus" aria-label="Preporučeno">
-          <header class="nx-price__head">
-            <h3>System</h3>
-            <p>Najbolji odnos moć/cena.</p>
-          </header>
-          <ul class="nx-price__features">
-            <li>Multipage sajt + CMS</li>
-            <li>UI kit i komponentni sistem</li>
-            <li>SEO osnov i analitika</li>
-          </ul>
-          <a href="#contact" class="nx-btn nx-btn--primary">Preporučeno</a>
-        </article>
-
-        <article class="nx-price">
-          <header class="nx-price__head">
-            <h3>Empire</h3>
-            <p>Za agresivan rast i dominaciju.</p>
-          </header>
-          <ul class="nx-price__features">
-            <li>Kompletan web ekosistem</li>
-            <li>Brand Bible + dizajn sistemi</li>
-            <li>AI automatizacije i integracije</li>
-          </ul>
-          <a href="#contact" class="nx-btn nx-btn--ghost">Zakaži razgovor</a>
-        </article>
+  <section id="video">
+    <div class="nx-wrap reveal">
+      <h2 class="nx-section-title">VIDEO SISTEM</h2>
+      <div class="nx-grid">
+        <article class="nx-card"><h3>Mini</h3><div class="nx-price">od 10€</div><ul class="nx-list"><li>1 video do 30s</li><li>Osnovna montaža</li></ul></article>
+        <article class="nx-card"><h3>Reels Pack</h3><div class="nx-price">od 50€</div><ul class="nx-list"><li>5 reels videa</li><li>Brend boje/tekst</li></ul></article>
+        <article class="nx-card"><h3>Full Edit</h3><div class="nx-price">od 100€</div><ul class="nx-list"><li>Kompletna montaža</li><li>Voiceover, captioni, efekti</li></ul></article>
       </div>
     </div>
   </section>
 
-  <!-- ===== PORTFOLIO ===== -->
-  <section class="nx-section" id="portfolio" aria-labelledby="portfolio-title">
-    <div class="nx-container">
-      <h2 class="nx-h2" id="portfolio-title">Radovi</h2>
-      <div class="nx-grid nx-grid--3 nx-portfolio">
-        <figure class="nx-work">
-          <img src="assets/img/work_01.jpg" alt="Primer projekta 1" class="nx-work__img">
-          <figcaption class="nx-work__cap">
-            <strong>Argus VPN — Landing</strong><br>Web + UI sistem
-          </figcaption>
-        </figure>
+  <div class="nx-divider"></div>
 
-        <figure class="nx-work">
-          <img src="assets/img/work_02.jpg" alt="Primer projekta 2" class="nx-work__img">
-          <figcaption class="nx-work__cap">
-            <strong>Healthy Rhythms — E-com</strong><br>Shop + brending
-          </figcaption>
-        </figure>
-
-        <figure class="nx-work">
-          <img src="assets/img/work_03.jpg" alt="Primer projekta 3" class="nx-work__img">
-          <figcaption class="nx-work__cap">
-            <strong>Pandi Barber — One-page</strong><br>Brzo lansiranje
-          </figcaption>
-        </figure>
+  <section id="branding">
+    <div class="nx-wrap reveal">
+      <h2 class="nx-section-title">IDENTITET SISTEM</h2>
+      <div class="nx-grid">
+        <article class="nx-card"><h3>Basic</h3><div class="nx-price">od 60€</div><ul class="nx-list"><li>Logo</li><li>Paleta + tipografija</li></ul></article>
+        <article class="nx-card"><h3>Standard</h3><div class="nx-price">od 120€</div><ul class="nx-list"><li>Logo + mockupi</li><li>Mini brand guide</li></ul></article>
+        <article class="nx-card"><h3>Premium</h3><div class="nx-price">od 200€</div><ul class="nx-list"><li>Kompletan identitet</li><li>3D logo / animacija</li></ul></article>
       </div>
     </div>
   </section>
 
-  <!-- ===== UGC ===== -->
-  <section class="nx-section" id="ugc" aria-labelledby="ugc-title">
-    <div class="nx-container">
-      <h2 class="nx-h2" id="ugc-title">UGC sadržaj</h2>
-      <div class="nx-grid nx-grid--2">
-        <article class="nx-card">
-          <h3 class="nx-card__title">Face UGC</h3>
-          <p class="nx-card__text">Model priča, demonstrira i gradi poverenje uz proizvod.</p>
-          <ul class="nx-list">
-            <li>Recenzije i preporuke</li>
-            <li>How-to i lifestyle snimci</li>
-            <li>Rezovi za oglase</li>
-          </ul>
-        </article>
-        <article class="nx-card">
-          <h3 class="nx-card__title">No-face UGC</h3>
-          <p class="nx-card__text">Estetski produkt klipovi sa fokusom na detalj i ritam.</p>
-          <ul class="nx-list">
-            <li>Unboxing i makro kadrovi</li>
-            <li>B-roll paketi za ads</li>
-            <li>Setovi za feed i storije</li>
-          </ul>
-        </article>
+  <div class="nx-divider"></div>
+
+  <section id="mgmt">
+    <div class="nx-wrap reveal">
+      <h2 class="nx-section-title">MENADŽMENT SISTEM</h2>
+      <div class="nx-grid">
+        <article class="nx-card"><h3>Start</h3><div class="nx-price">od 50€</div><ul class="nx-list"><li>Osnovno vođenje</li><li>3 objave nedeljno</li></ul></article>
+        <article class="nx-card"><h3>Boost</h3><div class="nx-price">od 100€</div><ul class="nx-list"><li>7 objava nedeljno</li><li>Hashtag/SEO strategija</li></ul></article>
+        <article class="nx-card"><h3>Empire</h3><div class="nx-price">od 180€</div><ul class="nx-list"><li>Full menadžment + ads</li><li>Izveštaji i optimizacija</li></ul></article>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="nx-section" id="about" aria-labelledby="about-title">
-    <div class="nx-container nx-about">
-      <h2 class="nx-h2" id="about-title">Ko je Nexory</h2>
-      <p class="nx-lead">
-        Nismo agencija za postove. Gradimo <strong>sistem</strong> — identitet, interfejs i mašineriju iza kulisa.
-        Hladno, precizno, bez izgovora.
-      </p>
-      <ul class="nx-bullets">
-        <li>“Crystal Void” vizuelni identitet, bez jeftinih efekata.</li>
-        <li>Design tokens + dokumentacija za skaliranje.</li>
-        <li>Performanse i brzina ispred svega.</li>
-      </ul>
-    </div>
-  </section>
+  <div class="nx-divider"></div>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="nx-section" id="contact" aria-labelledby="contact-title">
-    <div class="nx-container">
-      <h2 class="nx-h2" id="contact-title">Kontakt</h2>
-      <form class="nx-form" action="https://formspree.io/f/your-id" method="POST">
-        <div class="nx-form__row">
-          <label for="name">Ime i prezime</label>
-          <input id="name" name="name" type="text" placeholder="Tvoje ime" required>
+  <section id="contact">
+    <div class="nx-wrap reveal">
+      <h2 class="nx-section-title">AKTIVIRAJ KOMUNIKACIJU</h2>
+      <form class="nx-form" id="nxForm">
+        <div class="nx-row">
+          <div class="nx-field"><label for="name">Ime</label><input id="name" type="text" placeholder="Unesi ime" required></div>
+          <div class="nx-field"><label for="email">E-mail</label><input id="email" type="email" placeholder="example@gmail.com" required></div>
         </div>
-        <div class="nx-form__row">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" placeholder="tvoj@email.com" required>
+        <div class="nx-row">
+          <div class="nx-field"><label for="service">Usluga</label><select id="service" required>
+            <option value="">Odaberi</option>
+            <option>Web Sistem</option><option>Video Sistem</option>
+            <option>Identitet Sistem</option><option>Menadžment Sistem</option>
+          </select></div>
+          <div class="nx-field"><label for="package">Paket</label><select id="package" required>
+            <option value="">Odaberi</option>
+            <option>Basic</option><option>Standard</option><option>Premium</option>
+            <option>Start</option><option>Boost</option><option>Empire</option>
+            <option>Reels Pack</option><option>Full Edit</option><option>Mini</option>
+          </select></div>
         </div>
-        <div class="nx-form__row">
-          <label for="company">Kompanija (opciono)</label>
-          <input id="company" name="company" type="text" placeholder="Naziv kompanije">
-        </div>
-        <div class="nx-form__row">
-          <label for="scope">Šta ti treba?</label>
-          <select id="scope" name="scope" required>
-            <option value="">Odaberi…</option>
-            <option>Web sajt</option>
-            <option>Brending / UI-UX</option>
-            <option>UGC paket</option>
-            <option>AI automatizacije</option>
-            <option>Kompletan sistem</option>
-          </select>
-        </div>
-        <div class="nx-form__row">
-          <label for="message">Poruka</label>
-          <textarea id="message" name="message" rows="5" placeholder="Kratko objasni stanje i cilj…" required></textarea>
-        </div>
-        <button class="nx-btn nx-btn--primary" type="submit">Pošalji</button>
+        <div class="nx-field"><label for="msg">Poruka</label><textarea id="msg" rows="4" placeholder="Opiši projekat..."></textarea></div>
+        <button class="nx-cta nx-submit" type="submit">Pošalji zahtev</button>
+        <p id="nxStatus" style="margin-top:.8rem;color:var(--violet);font-size:.95rem"></p>
       </form>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="nx-footer" role="contentinfo">
-    <div class="nx-container nx-footer__wrap">
-      <div class="nx-footer__brand">
-        <span class="nx-logo__text">NEXORY</span>
-        <p>Preciznost izvan dizajna.</p>
-      </div>
-
-      <nav class="nx-footer__nav" aria-label="Footer navigacija">
-        <a href="#services">Usluge</a>
-        <a href="#pricing">Paketi</a>
-        <a href="#portfolio">Radovi</a>
-        <a href="#ugc">UGC</a>
-        <a href="#about">Ko smo</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
-
-      <div class="nx-footer__legal">
-        <small>© <span id="year">2025</span> NEXORY. Sva prava zadržana.</small>
-      </div>
-    </div>
+  <footer class="nx-footer">
+    © 2025 NEXORY SYSTEM — Preciznost izvan dizajna.
   </footer>
 
-  <!-- ARIA helper: bez JS-a, ali ostavljam ID za kasniji upgrade -->
-  <noscript>Za najbolje iskustvo, uključi JavaScript.</noscript>
+  <script>
+    const hdr=document.getElementById('nxHeader');
+    document.addEventListener('scroll',()=>hdr.classList.toggle('shrink',window.scrollY>8));
+    const form=document.getElementById('nxForm'),status=document.getElementById('nxStatus');
+    if(form){form.addEventListener('submit',e=>{e.preventDefault();status.textContent="Zahtev prihvaćen. Protokol aktiviran.";form.reset();window.scrollTo({top:0,behavior:'smooth'});});}
+  </script>
 </body>
 </html>
