@@ -139,3 +139,72 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--violet);
   .nx-header{width:94%}
   .nx-grid{flex-direction:column;align-items:center;}
 }
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 680px) {
+  .nx-header {
+    width: 94%;
+    height: 60px;
+    padding: 10px 16px;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .nx-brand img {
+    height: 32px;
+  }
+
+  /* Sakrij navigaciju dok nije otvorena */
+  .nx-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(15, 15, 20, 0.95);
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+    transition: right .35s var(--ease);
+    box-shadow: var(--glow-strong);
+  }
+
+  .nx-nav.open {
+    right: 0;
+  }
+
+  .nx-nav a {
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+  }
+
+  /* Hamburger dugme */
+  .nx-menu {
+    width: 32px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .nx-menu span {
+    height: 3px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all .3s var(--ease);
+  }
+
+  /* Animacija X-a kad je otvoren */
+  .nx-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .nx-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nx-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
