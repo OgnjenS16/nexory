@@ -9,7 +9,6 @@
   <meta name="description" content="Nexory System — web, video, identitet i menadžment u jednom sistemu.">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <!-- 🔗 ISPRAVLJENA PUTANJA KA CSS FAJLU -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -17,7 +16,7 @@
 
   <header class="nx-header" id="nxHeader">
     <div class="nx-brand">
-      <img src="assets/img/nexory_logo.png" alt="NEXORY Logo"><bb>
+      <img src="assets/img/nexory_logo.png" alt="NEXORY Logo">
     </div>
     <nav class="nx-nav">
       <a href="#web">Web</a>
@@ -96,23 +95,23 @@
       <h2 class="nx-section-title">AKTIVIRAJ KOMUNIKACIJU</h2>
       <form class="nx-form" id="nxForm">
         <div class="nx-row">
-          <div class="nx-field"><label for="name">Ime</label><input id="name" type="text" placeholder="Unesi ime" required></div>
-          <div class="nx-field"><label for="email">E-mail</label><input id="email" type="email" placeholder="example@gmail.com" required></div>
+          <div class="nx-field"><label for="name">Ime</label><input id="name" name="from_name" type="text" placeholder="Unesi ime" required></div>
+          <div class="nx-field"><label for="email">E-mail</label><input id="email" name="reply_to" type="email" placeholder="example@gmail.com" required></div>
         </div>
         <div class="nx-row">
-          <div class="nx-field"><label for="service">Usluga</label><select id="service" required>
+          <div class="nx-field"><label for="service">Usluga</label><select id="service" name="service" required>
             <option value="">Odaberi</option>
             <option>Web Sistem</option><option>Video Sistem</option>
             <option>Identitet Sistem</option><option>Menadžment Sistem</option>
           </select></div>
-          <div class="nx-field"><label for="package">Paket</label><select id="package" required>
+          <div class="nx-field"><label for="package">Paket</label><select id="package" name="package" required>
             <option value="">Odaberi</option>
             <option>Basic</option><option>Standard</option><option>Premium</option>
             <option>Start</option><option>Boost</option><option>Empire</option>
             <option>Reels Pack</option><option>Full Edit</option><option>Mini</option>
           </select></div>
         </div>
-        <div class="nx-field"><label for="msg">Poruka</label><textarea id="msg" rows="4" placeholder="Opiši projekat..."></textarea></div>
+        <div class="nx-field"><label for="msg">Poruka</label><textarea id="msg" name="message" rows="4" placeholder="Opiši projekat..."></textarea></div>
         <button class="nx-cta nx-submit" type="submit">Pošalji zahtev</button>
         <p id="nxStatus" style="margin-top:.8rem;color:var(--violet);font-size:.95rem"></p>
       </form>
@@ -123,11 +122,37 @@
     © 2025 NEXORY SYSTEM — Preciznost izvan dizajna.
   </footer>
 
+  <!-- EMAIL.JS INTEGRACIJA -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
+    (function(){
+      emailjs.init("phBYM7_pLMYLRhzTl");
+    })();
+
     const hdr=document.getElementById('nxHeader');
     document.addEventListener('scroll',()=>hdr.classList.toggle('shrink',window.scrollY>8));
-    const form=document.getElementById('nxForm'),status=document.getElementById('nxStatus');
-    if(form){form.addEventListener('submit',e=>{e.preventDefault();status.textContent="Zahtev prihvaćen. Protokol aktiviran.";form.reset();window.scrollTo({top:0,behavior:'smooth'});});}
+
+    const form=document.getElementById('nxForm');
+    const status=document.getElementById('nxStatus');
+
+    if(form){
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        status.textContent="Sistem obrađuje zahtev...";
+        status.style.color="var(--gray)";
+
+        emailjs.sendForm("service_n3dn9pu","template_4lrkynr",this)
+        .then(()=>{
+          status.textContent="Zahtev uspešno poslat. Sistem registrovao signal.";
+          status.style.color="var(--violet)";
+          form.reset();
+        },(err)=>{
+          status.textContent="Greška u protokolu. Pokušaj ponovo.";
+          status.style.color="red";
+          console.error("EmailJS Error:", err);
+        });
+      });
+    }
   </script>
 </body>
 </html>
